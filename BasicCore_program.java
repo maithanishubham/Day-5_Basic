@@ -6,15 +6,26 @@ public class BasicCore_program {
 
 	public static void main(String[] args) {
 
-		int year;
+		int num;
+		int mul = 1;
 
-		System.out.println("Enter an Year : ");
 		Scanner sc = new Scanner(System.in);
-		year = sc.nextInt();
+		System.out.println("Enter the Power Value N:");
+		num = sc.nextInt();
+		
+		if (num > 31) {
+			System.out.println("value of number should be less than 31");
+			return;
+		}
 
-		if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))
-			System.out.println("This year is a leap year");
-		else
-			System.out.println("This year is not a leap year");
+		else {
+			System.out.println(mul);
+			for (int j = 1; j <= num; j++) {
+				mul = mul * 2;
+				System.out.println(mul);
+			}
+		}
+
 	}
+
 }

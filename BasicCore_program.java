@@ -4,21 +4,26 @@ import java.util.Scanner;
 
 public class BasicCore_program {
 
-	public static void main(String[] args) {
+	static int n;
 
-		double result = 0, num = 0, j;
-		int n;
+	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
 
-		System.out.print("enter the harmonic you want to find: ");
+		System.out.println("Enter the any number:");
 		n = sc.nextInt();
 
-		for (j = 1; j <= n; j++) {
-			num = num + (1 / j);
-			result = num;
-		}
-		System.out.println("the value of harmonic no. " + n + " is: " + result);
+		System.out.print("The Prime Factors of " + n + " are : ");
 
+		int i = 2;
+
+		while (n > 1) {
+			if (n % i == 0) {
+				System.out.print(i + " ");
+				n = n / i;
+			} else
+				i++;
+		}
+		System.out.println(" ");
 	}
 }

@@ -1,21 +1,15 @@
 package com.basicprogram;
 
-import java.util.Scanner;
-
 public class BasicCore_program {
 
 	public static void main(String[] args) {
 
-		Scanner reader = new Scanner(System.in);
+		char ch = 'h';
 
-		System.out.print("Enter a number: ");
-
-		int num = reader.nextInt();
-
-		if (num % 2 == 0)
-			System.out.println(num + " is even");
+		if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+			System.out.println(ch + " is vowel");
 		else
-			System.out.println(num + " is odd");
+			System.out.println(ch + " is consonant");
 
 	}
 
